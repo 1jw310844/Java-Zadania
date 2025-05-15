@@ -233,13 +233,12 @@ public class FractionJW {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;               // ten sam obiekt
-        if (obj == null) return false;               // null nie jest równy
-        if (getClass() != obj.getClass()) return false;  // inna klasa
+        if (this == obj) return true;              
+        if (obj == null) return false;            
+        if (getClass() != obj.getClass()) return false; 
 
         FractionJW other = (FractionJW) obj;
 
-        // Tworzymy kopie i redukujemy oba ułamki, żeby porównać ich wartości nieskracalne
         FractionJW f1 = new FractionJW(this.licznik, this.mianownik);
         FractionJW f2 = new FractionJW(other.licznik, other.mianownik);
 
